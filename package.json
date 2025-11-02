@@ -1,0 +1,16 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "Full-stack CRUD app with authentication",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend"
+  }
+}
