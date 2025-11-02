@@ -1,11 +1,12 @@
-services:
+databases:
   # PostgreSQL Database
-  - type: pg
-    name: crud-app-db
+  - name: crud-app-db
     plan: free
     databaseName: crudapp
     user: crudapp
+    postgresMajorVersion: "16"
 
+services:
   # Backend API
   - type: web
     name: crud-app-backend
